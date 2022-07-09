@@ -1,31 +1,42 @@
-Let's make a python package that can do some interesting-ish stuff with the spotify api.
+# Code-Along 9.1 - Python Packages and Virtual Environments (SOLUTION)
 
+## Requirements
 
+- Text Editor (Visual Studio Code)
+- Local Python Installation (Anaconda)
+- Pipenv (for Virtual Environments)
+- Command Line Application (Terminal - MacOS, Git Bash - Windows)
 
-Bash Commands
-- File Structure
-- Make a File
-- Do something interesting with the file
-- Import the file as a script
+Setup instructions for all of these tools can be found in the [Unit 3 Setup Instructions](https://github.com/bloominstituteoftechnology/DS-Unit-3-Setup) and **must** be completed before participating in this Code-Along. 
 
-## File Structure
+## Set Up
 
-### Outer Folder
-Make outer folder
-make .env file
-Make virtual environment 
+### 1. [Log in or sign up for a Spotify Developer Account.](https://developer.spotify.com/dashboard/)
 
-### Inner Folder
-Make innner folder
-What does the inner folder need in order for it to be a python package?
-make spotify.py in the inner folder
-make top_50.py in the inner folder
+Once you're logged in, navigate to the Dashboard and select "Create An App"
 
-## Turn on Virtual Environment
-Install requests and python-dotenv to the virtual environment
-Turn on the virtual environment
+![Spotify Develoepr Dashboard](https://github.com/bloominstituteoftechnology/code_along_main/blob/main/DS_Core/Unit_3/Sprint_11/Code_Along_1/assets/spotify_dashboard.png)
 
-## Make the Python Package do something interesting
-Get API Keys
-Copy contents of python file
-Write a function to get the top 50 spotify songs from the playlist.
+Give your app a name, description, and agree to the Terms of Service and Branding Guidelines.
+
+![Set up App Details and Agree to TOS](https://github.com/bloominstituteoftechnology/code_along_main/blob/main/DS_Core/Unit_3/Sprint_11/Code_Along_1/assets/create_an_app.png)
+
+Once you've complete these steps you will be presented with two password-looking things called: 
+
+- Client ID
+- Client Secret
+
+2. Add the API Keys to the project:
+
+You will need to create a `.env` file in the outer folder of this repository and add the Client ID and Client Secret to that file in the following format: 
+
+```
+CLIENT_ID=1886d8afa9b48aa93282286d88bd7bb
+CLIENT_SECRET=a337e9d2f7034923df9ccd319459750
+```
+
+Make sure that you close down your virtual environment, and command line application and then your command line application and virtual environment or else these API keys in order to register these API keys with the project.
+
+3. Run the main file as a script:
+
+`python top_50.py`
