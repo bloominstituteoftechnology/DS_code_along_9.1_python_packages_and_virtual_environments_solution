@@ -16,7 +16,7 @@ def get_top_50_links():
 
     query_url = 'https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF'
 
-    # Query the Spotify API for the song
+    # Query the Spotify API for the playlist
     response = requests.get(query_url, headers=headers)
     # Parse the response into a dictionary (JSON)
     response = response.json()
