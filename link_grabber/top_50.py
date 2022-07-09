@@ -21,6 +21,8 @@ def get_top_50_links():
     # Parse the response into a dictionary (JSON)
     response = response.json()
 
+    # Exploring the response object's structure
+
     # print(response)
     # print(len(response))
     # print(response.keys())
@@ -28,18 +30,16 @@ def get_top_50_links():
     # print(len(response['tracks']))
     # print(response['tracks'].keys())
     # print(response['tracks']['items'])
+    # print(len(response['tracks']['items']))
+    # print(len(response['tracks']['items'][0].keys()))
     # print(response['tracks']['items'][0]['track']['external_urls']['spotify'])
 
+    # get links to all of the songs in this playlist
     song_links = [song['track']['external_urls']['spotify']
                   for song in response['tracks']['items']]
 
-    # print([song['uri'] for song in response['tracks']['items']])
-
-    # song_links = [track for track in response['tracks']]
-
-    print(song_links)
-    print(len(song_links))
+    return song_links
 
 
 if __name__ == '__main__':
-    get_top_50_links()
+    print(get_top_50_links())
